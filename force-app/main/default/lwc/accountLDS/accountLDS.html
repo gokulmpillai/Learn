@@ -1,0 +1,7 @@
+<template>
+   <lightning-card title="Create Account" columns = "2">
+       <lightning-record-form object-api-name="Account" fields={accFields} record-id={recordId} layout-type="Full">
+           <lightning-button title = "Create" variant="brand" onclick={successHandler}></lightning-button>
+       </lightning-record-form>
+   </lightning-card> 
+</template>

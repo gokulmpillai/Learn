@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Learning LWC" >
+        <div>Hello {dynamicGreeting}!</div>
+        <lightning-input label='Enter name' onchange={greetingHandler}>
+        </lightning-input>
+        <lightning-input type="Checkbox" onchange={checkHandler}></lightning-input>
+        <template if:true = {checkbox}>
+            <div>
+                I am here
+            </div>
+        </template>
+        <br>Cities displayed using For each</br> 
+        <template for:each = {cityList} for:item = "city"> 
+            <p key = {city}>{city}</p>
+        </template>
+        <br>Cities displayed using Iterator</br>
+        <template iterator:it={cityList} >
+             <p key = {it.value}>{it.value}</p>         
+        </template>
+    </lightning-card>
+</template>
