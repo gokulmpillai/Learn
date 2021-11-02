@@ -7,7 +7,7 @@
                 <template for:each={accounts} for:item="account">
                     <li key={account.Id}>
                         <div class="slds-p-around_medium lgc-bg">
-                            <lightning-tile label={account.Name} href="/path/to/somewhere">
+                            <lightning-tile label={account.Name}>
                                 <p class="slds-truncate" title={account.Phone}>{account.Phone}</p>
                             </lightning-tile>
                         </div>

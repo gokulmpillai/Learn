@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Account Records">
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input label="Number of Accounts" onchange={accountChangeHandler}></lightning-input>
+            <lightning-button variant="Brand" label="Fetch Accounts" onclick={getAccountHandler}></lightning-button>
+        </div>
+        <template if:true={accounts}>
+            <template for:each={accounts} for:item = "acc">
+                <lightning-layout vertical-align="center" key={acc.id}>
+                    <li>
+                        {acc.Name}
+                        {acc.AccountNumber}
+                    </li>
+                </lightning-layout>
+            </template>
+        </template>
+    </lightning-card>
+</template>
